@@ -26,6 +26,6 @@ public ZooServ zser;
 	public String deletedetails(@PathVariable("id")int id)
 	{
 		zser.deletedetails(id);
-		return "Delete successfully";
+		return "Delete successfully!!!!";
 	}
 }
