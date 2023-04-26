@@ -15,7 +15,7 @@ public class ZooMod {
 	private String aquantity;
 	private String aorgin;
 	
-	private String hybrid;
+	private String ahybrid;
 	private String aclassification;
 	private String afood;
 	private String abloodtype;
