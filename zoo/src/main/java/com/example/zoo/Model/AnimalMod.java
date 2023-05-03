@@ -7,7 +7,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="Animal")
-public class ZooMod {
+public class AnimalMod {
 	@Id
 	@Column(name="aid")
 	private int aid;
@@ -46,10 +46,10 @@ public class ZooMod {
 		this.aorgin = aorgin;
 	}
 	public String getHybrid() {
-		return hybrid;
+		return ahybrid;
 	}
 	public void setHybrid(String hybrid) {
-		this.hybrid = hybrid;
+		this.ahybrid = hybrid;
 	}
 	public String getAclassification() {
 		return aclassification;
@@ -80,6 +80,17 @@ public class ZooMod {
 	}
 	public void setAmamals(String amamals) {
 		this.amamals = amamals;
+	}
+	@Override
+	public String toString() {
+		return "ZooMod [aid=" + aid + ", aspecification=" + aspecification + ", aquantity=" + aquantity + ", aorgin="
+				+ aorgin + ", ahybrid=" + ahybrid + ", aclassification=" + aclassification + ", afood=" + afood
+				+ ", abloodtype=" + abloodtype + ", arptiles=" + arptiles + ", amamals=" + amamals + ", getAid()="
+				+ getAid() + ", getAspecification()=" + getAspecification() + ", getAquantity()=" + getAquantity()
+				+ ", getAorgin()=" + getAorgin() + ", getHybrid()=" + getHybrid() + ", getAclassification()="
+				+ getAclassification() + ", getAfood()=" + getAfood() + ", getAbloodtype()=" + getAbloodtype()
+				+ ", getArptiles()=" + getArptiles() + ", getAmamals()=" + getAmamals() + ", getClass()=" + getClass()
+				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
 	}
 
 }
