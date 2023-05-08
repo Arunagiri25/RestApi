@@ -1,32 +1,169 @@
 package Service;
 
-import java.util.List;
+
+
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import Model.LoanApplicationModel;
+import Model.UserModel;
 import Repository.LoanApplicationRepo;
+import Repository.UserRepo;
+
+
+
+
 
 @Service
 
-public class loanService
-
-{
-
-@Autowired
-
-LoanApplicationRepo laRep;
 
 
-public List<LoanApplicationModel> get()
+public class loanService {
 
-{
+	@Autowired
 
-List<LoanApplicationModel> l=laRep.findAll();
+	public UserRepo rep;
 
-return l;
 
-}
+
+	
+
+
+
+	public UserModel adduser(UserModel usmodel)
+
+
+
+	{
+
+
+
+	return rep.save(usmodel);
+
+
+
+	}
+
+
+
+
+
+
+
+	public Optional<UserModel> getUsermodelbyId(int id)
+
+
+
+	{
+
+
+
+	return rep.findById(id);
+
+
+
+	}
+
+
+
+	public UserModel update (UserModel id)
+
+
+
+	{
+
+
+
+	return rep.saveAndFlush(id);
+
+
+
+	}
+
+
+
+	public void delete(int id)
+
+
+
+	{
+
+
+
+	rep.deleteById(id);
+
+
+
+	}
+
+
+
+	
+
+
+
+public LoanApplicationRepo repe;
+
+	public LoanApplicationModel adduser(LoanApplicationModel usmodel)
+
+	{
+
+	return repe.save(usmodel);
+
+	}
+
+	public Optional<LoanApplicationModel> getLoanApplicationbyId(int loanId)
+
+	{
+
+
+
+	return repe.findById(loanId);
+
+
+
+	}
+
+
+
+	public LoanApplicationModel update (LoanApplicationModel loanId)
+
+	{
+
+	return repe.saveAndFlush(loanId);
+
+	}
+
+	public void delete1(int loanId)
+
+	{
+
+	repe.deleteById(loanId);
+
+	}
+
+
+
+	
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
