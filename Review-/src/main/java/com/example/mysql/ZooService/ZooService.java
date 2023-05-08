@@ -8,6 +8,8 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.mysql.ZooModel.ZooModel;
 import com.example.mysql.ZooRepository.ZooRepo;
@@ -71,5 +73,9 @@ public List<ZooModel> PagingAndSorting(int offset,int pagesize,String field)
 Pageable paging=PageRequest.of(pagesize, pagesize).withSort(Sort.by(field));
 Page<ZooModel> stud=repo.findAll(paging);
 return stud.getContent();
+}
+public List<ZooModel> getData(@RequestParam String name)
+{
+	return repo.getData(name);
 }
 }

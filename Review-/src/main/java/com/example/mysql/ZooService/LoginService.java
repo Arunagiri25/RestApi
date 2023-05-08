@@ -37,6 +37,10 @@ public String loginCheckData1(String username, String password) {
 	// TODO Auto-generated method stub
 	return null;
 }
+public LoginModel addUserx(LoginModel hos) {
+	// TODO Auto-generated method stub
+	return null;
+}
 }
 
 

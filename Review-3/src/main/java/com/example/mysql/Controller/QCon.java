@@ -19,8 +19,7 @@ public class QCon {
 	@Autowired
 	Qrepo qrepo;
 	
-	@Autowired
-	@PostMapping("post")
+	@PostMapping("/post")
 	public String javaDetails(@RequestBody Question q)
 	{
 		qrepo.save(q);
